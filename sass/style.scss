@@ -1,0 +1,139 @@
+$color-primary: hsl(257, 40%, 49%);
+$color-secondary: hsl(300, 69%, 71%);
+$color-white: #fff;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open sans', sans-serif;
+}
+
+header{
+  display: flex;
+  min-height: 100vh;
+  max-width: 100%;
+  background-image: url('../images/bg-desktop.svg'), linear-gradient($color-primary, $color-primary);
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
+.main-section{
+  max-width: 144rem; 
+  margin: auto; 
+}
+
+.logo{
+  display: block;
+  margin-bottom: 12rem;
+  img{
+    height: 6rem;
+  }
+}
+
+.container{
+  display: flex;
+  gap: 6rem;
+  
+  &-img{
+    flex: 60%;
+
+    img{
+      width: 100%;
+    }
+  }
+  
+  &-text{
+    flex: 45%;
+    color: $color-white;
+    padding-top: 4rem;
+    
+    .heading-primary{
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.3;
+      font-size: 4.8rem;
+      margin-bottom: 2.8rem;
+    }
+    
+    .paragraph{
+      font-size: 2rem;
+      line-height: 1.6;
+      margin-bottom: 4rem;
+    }
+    
+    .btn{
+      &:link,
+      &:visited{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-primary;
+        padding: 1.8rem 7.2rem;
+        background: $color-white;
+        border-radius: 10rem;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
+        transition: all 0.3s;
+      }
+      &:hover,
+      &:active{
+        background: $color-secondary;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.icons{
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+  .icon{
+    display: block;
+    color: $color-white;
+    padding: 1rem;
+    font-size: 2.2rem;
+    border: solid 1px $color-white;
+    border-radius: 10rem;
+    transition: all 0.3s;
+
+    &:hover{
+      color: $color-secondary;
+      border-color: $color-secondary;
+    }
+  }
+}
+
+footer{
+  background-color: #000;
+  padding: 4rem 0;
+  .attribution { 
+    color: $color-secondary;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; 
+    text-align: center; 
+
+    a{
+      &:link,
+      &:visited{
+        color: $color-primary; 
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      &:hover,
+      &:active{
+        color: $color-white;
+      }
+    }
+  }
+}
